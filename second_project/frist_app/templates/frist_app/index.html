@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <div class="row justify-content-center">
+    {% for meal in meals %}
+    <div class="col-sm-3 m-3">
+      <div class="card" >
+        <img src={{meal.strMealThumb}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{meal.strMeal}}</h5>
+          <h6>{{meal.idMeal}}</h6>
+          <p class="card-text">This is a longer card with supporting text below a natural lead-in to additional content.This content is a little bit longer</p>
+          
+        </div>
+      </div>
+      
+    </div>
+    {% endfor %}
+  </div>
+ 
+  {% endblock content %}
